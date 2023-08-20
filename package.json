@@ -1,0 +1,48 @@
+{
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "next build",
+		"dev": "next dev",
+		"format": "prettier --cache --cache-strategy=content --cache-location=.cache/prettier/cache --ignore-path=.gitignore --check . '!pnpm-lock.yaml'",
+		"lint:scripts": "eslint --cache --cache-strategy=content --cache-location=.cache/eslint/ --ignore-path=.gitignore --ext=cjs,mjs,ts,tsx .",
+		"lint:styles": "stylelint --cache --cache-location=.cache/stylelint/ --cache-strategy=content --ignore-path=.gitignore '**/*.css'",
+		"prepare": "husky install",
+		"start": "next start",
+		"typecheck": "tsc"
+	},
+	"dependencies": {
+		"axios": "^1.4.0",
+		"next": "13.4.19",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-icons": "^4.10.1"
+	},
+	"devDependencies": {
+		"@tsconfig/next": "2.0.0",
+		"@tsconfig/strictest": "2.0.1",
+		"@types/node": "20.5.1",
+		"@types/react": "18.2.20",
+		"@types/react-dom": "18.2.7",
+		"@typescript-eslint/eslint-plugin": "^6.4.0",
+		"@typescript-eslint/parser": "^6.4.0",
+		"autoprefixer": "^10.4.15",
+		"eslint": "8.47.0",
+		"eslint-config-next": "^13.4.19",
+		"eslint-plugin-next": "^0.0.0",
+		"eslint-plugin-react": "^7.33.2",
+		"husky": "^8.0.3",
+		"lint-staged": "14.0.0",
+		"postcss": "^8.4.28",
+		"prettier": "^3.0.2",
+		"stylelint": "15.10.3",
+		"stylelint-config-standard": "34.0.0",
+		"tailwindcss": "^3.3.3",
+		"typescript": "^5.1.6"
+	},
+	"packageManager": "pnpm@8.6.3",
+	"engines": {
+		"node": ">=18",
+		"pnpm": ">=8"
+	}
+}
