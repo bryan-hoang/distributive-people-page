@@ -1,4 +1,4 @@
-import config from '@/../config.json';
+import config from '@/config/config.json';
 
 export const Ps1 = () => {
 	return (

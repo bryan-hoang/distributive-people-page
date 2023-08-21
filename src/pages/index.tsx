@@ -6,7 +6,7 @@ import { InputField } from '@/features/cli';
 import { banner } from '@/features/commands';
 import { useHistory } from '@/features/history';
 
-import config from '@/../config.json';
+import config from '@/config/config.json';
 
 interface IndexPageProps {
 	inputRef: React.MutableRefObject<HTMLInputElement>;

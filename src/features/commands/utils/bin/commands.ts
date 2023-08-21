@@ -2,7 +2,7 @@
 
 import * as bin from './index';
 
-import config from '@/../config.json';
+import config from '@/config/config.json';
 
 // Help
 export const help = async (args: string[]): Promise<string> => {

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import config from '@/../config.json';
+import config from '@/config/config.json';
 
 export const getProjects = async () => {
 	const { data } = await axios.get(
