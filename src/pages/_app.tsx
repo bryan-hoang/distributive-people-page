@@ -1,3 +1,4 @@
+import type { AppProps } from 'next/app';
 import localFont from 'next/font/local';
 import { useRef } from 'react';
 
@@ -11,11 +12,11 @@ const hackFont = localFont({
 	fallback: ['monospace'],
 });
 
-const App = ({ Component, pageProps }) => {
+function App({ Component, pageProps }: AppProps): JSX.Element {
 	const inputRef = useRef<HTMLInputElement>(null);
 
 	const onClickAnywhere = () => {
-		inputRef.current.focus();
+		inputRef.current?.focus();
 	};
 
 	return (
@@ -31,6 +32,6 @@ const App = ({ Component, pageProps }) => {
 			</main>
 		</>
 	);
-};
+}
 
 export default App;

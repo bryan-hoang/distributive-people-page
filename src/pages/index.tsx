@@ -8,12 +8,12 @@ import { useHistory } from '@/features/history';
 
 import config from '@/config/config.json';
 
-interface IndexPageProps {
+type IndexPageProps = {
 	inputRef: React.MutableRefObject<HTMLInputElement>;
-}
+};
 
-const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
-	const containerRef = useRef(null);
+function IndexPage({ inputRef }: IndexPageProps): JSX.Element {
+	const containerRef = useRef<HTMLDivElement>(null);
 	const {
 		history,
 		command,
@@ -67,6 +67,6 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
 			</div>
 		</>
 	);
-};
+}
 
 export default IndexPage;

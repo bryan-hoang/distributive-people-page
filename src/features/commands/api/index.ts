@@ -1,12 +1,24 @@
 import axios from 'axios';
+import { createZodFetcher } from 'zod-fetch';
+import { z } from 'zod';
 
 import config from '@/config/config.json';
+import { fetchJSON } from '@/lib/fetch';
+
+const fetchWithZod = createZodFetcher(fetchJSON);
 
 export const getProjects = async () => {
-	const { data } = await axios.get(
+	const response = await fetchWithZod(
+		z.array(
+			z.object({
+				name: z.string(),
+				html_url: z.string(),
+			}),
+		),
 		`https://api.github.com/users/${config.social.github}/repos`,
 	);
-	return data;
+
+	return response;
 };
 
 export const getReadme = async () => {

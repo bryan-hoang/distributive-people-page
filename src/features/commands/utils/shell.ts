@@ -20,7 +20,8 @@ export const shell = async (
 			`shell: command not found: ${args[0]}. Try 'help' to get started.`,
 		);
 	} else {
-		const output = await bin[args[0]](args.slice(1));
+		// https://github.com/microsoft/TypeScript/issues/10998#issuecomment-248163332
+		const output = await (<any>bin)[args[0]](args.slice(1));
 		setHistory(output);
 	}
 

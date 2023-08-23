@@ -20,8 +20,17 @@ dependencies:
   react-icons:
     specifier: ^4.10.1
     version: 4.10.1(react@18.2.0)
+  zod:
+    specifier: 3.22.2
+    version: 3.22.2
+  zod-fetch:
+    specifier: 0.1.1
+    version: 0.1.1
 
 devDependencies:
+  '@total-typescript/ts-reset':
+    specifier: 0.5.1
+    version: 0.5.1
   '@tsconfig/next':
     specifier: 2.0.0
     version: 2.0.0
@@ -366,6 +375,10 @@ packages:
     dependencies:
       tslib: 2.6.2
     dev: false
+
+  /@total-typescript/ts-reset@0.5.1:
+    resolution: {integrity: sha512-AqlrT8YA1o7Ff5wPfMOL0pvL+1X+sw60NN6CcOCqs658emD6RfiXhF7Gu9QcfKBH7ELY2nInLhKSCWVoNL70MQ==}
+    dev: true
 
   /@tsconfig/next@2.0.0:
     resolution: {integrity: sha512-ip/XpFLWuUrhDkbI8ixpWxPlmWvUhQCLS5rB7nibcZUavA1Ru34Q7a5CniBM7BdHw1YlAXu40HXUn66h/A4EBQ==}
@@ -3633,6 +3646,14 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /zod-fetch@0.1.1:
+    resolution: {integrity: sha512-1YqEhqjIQuatiHGCiKceAEzLrd2PZAN/Y8lWSlhkec2nDuImePieFWX33WSB+c1E4P/kEiai7rb8upBMdjFo1w==}
+    dev: false
+
   /zod@3.21.4:
     resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
+    dev: false
+
+  /zod@3.22.2:
+    resolution: {integrity: sha512-wvWkphh5WQsJbVk1tbx1l1Ly4yg+XecD+Mq280uBGt9wa5BKSWf4Mhp6GmrkPixhMxmabYY7RbzlwVP32pbGCg==}
     dev: false

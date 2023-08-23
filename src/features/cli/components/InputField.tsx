@@ -1,9 +1,29 @@
-import { ChangeEvent, KeyboardEvent } from 'react';
+import type {
+	ChangeEvent,
+	Dispatch,
+	KeyboardEvent,
+	MutableRefObject,
+	RefObject,
+	SetStateAction,
+} from 'react';
 
 import { commandExists, handleTabCompletion, shell } from '@/features/commands';
+import type { History } from '@/features/history/types';
 import { Ps1 } from './Ps1';
 
-export const InputField = ({
+type InputFieldProps = {
+	inputRef: MutableRefObject<HTMLInputElement>;
+	containerRef: RefObject<HTMLDivElement>;
+	command: string;
+	setCommand: Dispatch<SetStateAction<string>>;
+	lastCommandIndex: number;
+	setLastCommandIndex: Dispatch<SetStateAction<number>>;
+	history: History[];
+	setHistory: (value: string) => void;
+	clearHistory: () => void;
+};
+
+export function InputField({
 	inputRef,
 	containerRef,
 	command,
@@ -13,9 +33,9 @@ export const InputField = ({
 	setHistory,
 	setLastCommandIndex,
 	clearHistory,
-}) => {
+}: InputFieldProps): JSX.Element {
 	const onSubmit = async (event: KeyboardEvent<HTMLInputElement>) => {
-		const commands: [string] = history
+		const commands = history
 			.map(({ command }) => command)
 			.filter((command: string) => command);
 
@@ -49,7 +69,7 @@ export const InputField = ({
 			event.preventDefault();
 			setLastCommandIndex(0);
 			await shell(command, setHistory, clearHistory, setCommand);
-			containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
+			containerRef.current?.scrollTo(0, containerRef.current.scrollHeight);
 		}
 
 		if (event.key === 'ArrowUp' || (event.ctrlKey && event.key === 'p')) {
@@ -108,4 +128,4 @@ export const InputField = ({
 			/>
 		</div>
 	);
-};
+}
