@@ -80,7 +80,7 @@ export function InputField({
 			const index: number = lastCommandIndex + 1;
 			if (index <= commands.length) {
 				setLastCommandIndex(index);
-				setCommand(commands[commands.length - index]);
+				setCommand(commands[commands.length - index] as string);
 			}
 		}
 
@@ -92,7 +92,7 @@ export function InputField({
 			const index: number = lastCommandIndex - 1;
 			if (index > 0) {
 				setLastCommandIndex(index);
-				setCommand(commands[commands.length - index]);
+				setCommand(commands[commands.length - index] as string);
 			} else {
 				setLastCommandIndex(0);
 				setCommand('');

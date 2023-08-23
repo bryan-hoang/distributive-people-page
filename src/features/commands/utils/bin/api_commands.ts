@@ -7,7 +7,7 @@ import {
 	getWeather,
 } from '@/features/commands';
 
-export const projects = async (args: string[]): Promise<string> => {
+export const projects = async (_args: string[]): Promise<string> => {
 	const projects = await getProjects();
 	return projects
 		.map(
@@ -17,12 +17,12 @@ export const projects = async (args: string[]): Promise<string> => {
 		.join('\n');
 };
 
-export const quote = async (args: string[]): Promise<string> => {
+export const quote = async (_args: string[]): Promise<string> => {
 	const data = await getQuote();
 	return data.quote;
 };
 
-export const readme = async (args: string[]): Promise<string> => {
+export const readme = async (_args: string[]): Promise<string> => {
 	const readme = await getReadme();
 	return `Opening GitHub README...\n
   ${readme}`;

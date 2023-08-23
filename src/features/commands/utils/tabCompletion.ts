@@ -8,7 +8,7 @@ export const handleTabCompletion = (
 		entry.startsWith(command),
 	);
 
-	if (commands.length === 1) {
+	if (commands.length === 1 && typeof commands[0] !== 'undefined') {
 		setCommand(commands[0]);
 	}
 };

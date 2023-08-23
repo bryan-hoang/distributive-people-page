@@ -1,9 +1,8 @@
-import axios from 'axios';
 import { createZodFetcher } from 'zod-fetch';
 import { z } from 'zod';
 
+import { fetch, fetchJSON, handleFetchError } from '@/lib/fetch';
 import config from '@/config/config.json';
-import { fetchJSON } from '@/lib/fetch';
 
 const fetchWithZod = createZodFetcher(fetchJSON);
 
@@ -22,22 +21,31 @@ export const getProjects = async () => {
 };
 
 export const getReadme = async () => {
-	const { data } = await axios.get(config.readmeUrl);
+	const response = await fetch(config.readmeUrl);
+	const data = await response.text();
 	return data;
 };
 
 export const getWeather = async (city: string) => {
 	try {
-		const { data } = await axios.get(`https://wttr.in/${city}?ATm`);
+		const response = await fetch(`https://wttr.in/${city}?ATm`);
+		const data = await response.text();
 		return data;
 	} catch (error) {
-		return error;
+		handleFetchError(error);
+
+		return `Error fetching weather: ${
+			error instanceof Error ? error.message : error
+		}`;
 	}
 };
 
 export const getQuote = async () => {
-	const { data } = await axios.get('https://api.quotable.io/random');
+	const data = await fetchWithZod(
+		z.object({ author: z.string(), content: z.string() }),
+		'https://api.quotable.io/random',
+	);
 	return {
-		quote: `“${data.content}” — ${data.author}`,
+		quote: `"${data.content}" _ ${data.author}`,
 	};
 };
