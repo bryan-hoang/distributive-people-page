@@ -35,7 +35,7 @@
 		"eslint-plugin-react": "^7.33.2",
 		"husky": "^8.0.3",
 		"lint-staged": "14.0.0",
-		"postcss": "^8.4.28",
+		"postcss": "^8.4.31",
 		"prettier": "^3.0.2",
 		"stylelint": "15.10.3",
 		"stylelint-config-standard": "34.0.0",
