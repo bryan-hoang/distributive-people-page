@@ -1,4 +1,4 @@
-import * as bin from './bin';
+import * as bin from "./bin";
 
 export const handleTabCompletion = (
 	command: string,
@@ -8,7 +8,7 @@ export const handleTabCompletion = (
 		entry.startsWith(command),
 	);
 
-	if (commands.length === 1 && typeof commands[0] !== 'undefined') {
+	if (commands.length === 1 && typeof commands[0] !== "undefined") {
 		setCommand(commands[0]);
 	}
 };

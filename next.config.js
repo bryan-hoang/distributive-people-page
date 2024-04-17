@@ -2,7 +2,7 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-	output: 'export',
+	output: "export",
 	reactStrictMode: true,
 	eslint: {
 		ignoreDuringBuilds: true,
@@ -10,7 +10,7 @@ const nextConfig = {
 	typescript: {
 		ignoreBuildErrors: true,
 	},
-	basePath: '/bryanhoang',
+	basePath: "/bryanhoang",
 };
 
 export default nextConfig;

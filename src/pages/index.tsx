@@ -1,12 +1,12 @@
-import { useEffect, useRef } from 'react';
-import Head from 'next/head';
+import Head from "next/head";
+import { useEffect, useRef } from "react";
 
-import { History } from '@/features/history';
-import { InputField } from '@/features/cli';
-import { banner } from '@/features/commands';
-import { useHistory } from '@/features/history';
+import { InputField } from "@/features/cli";
+import { banner } from "@/features/commands";
+import { History } from "@/features/history";
+import { useHistory } from "@/features/history";
 
-import config from '@/config/config.json';
+import config from "@/config/config.json";
 
 type IndexPageProps = {
 	inputRef: React.MutableRefObject<HTMLInputElement>;

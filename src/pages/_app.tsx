@@ -1,15 +1,15 @@
-import type { AppProps } from 'next/app';
-import localFont from 'next/font/local';
-import { useRef } from 'react';
+import type { AppProps } from "next/app";
+import localFont from "next/font/local";
+import { useRef } from "react";
 
-import { Head } from '@/components/Head';
+import { Head } from "@/components/Head";
 
-import '@/styles/global.css';
+import "@/styles/global.css";
 
 const hackFont = localFont({
-	src: '../assets/fonts/Hack-NF.ttf',
-	variable: '--font-hack',
-	fallback: ['monospace'],
+	src: "../assets/fonts/Hack-NF.ttf",
+	variable: "--font-hack",
+	fallback: ["monospace"],
 });
 
 function App({ Component, pageProps }: AppProps): JSX.Element {

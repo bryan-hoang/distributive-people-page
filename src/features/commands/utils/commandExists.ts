@@ -1,8 +1,8 @@
-import * as bin from './bin';
+import * as bin from "./bin";
 
 export const commandExists = (command: string) => {
-	const commands = ['clear', ...Object.keys(bin)];
+	const commands = ["clear", ...Object.keys(bin)];
 	return (
-		commands.indexOf((command.split(' ')[0] as string).toLowerCase()) !== -1
+		commands.indexOf((command.split(" ")[0] as string).toLowerCase()) !== -1
 	);
 };

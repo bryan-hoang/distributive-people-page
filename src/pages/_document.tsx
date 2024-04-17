@@ -1,4 +1,4 @@
-import { Head, Html, Main, NextScript } from 'next/document';
+import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
 	return (
@@ -7,7 +7,7 @@ export default function Document() {
 				<meta
 					name="description"
 					content="Meet Bryan Hoang, the terminal based website of a Software developer at Distributive!"
-				></meta>
+				/>
 			</Head>
 			<body>
 				<Main />

@@ -1,8 +1,8 @@
-import { createZodFetcher } from 'zod-fetch';
-import { z } from 'zod';
+import { z } from "zod";
+import { createZodFetcher } from "zod-fetch";
 
-import { fetch, fetchJSON, handleFetchError } from '@/lib/fetch';
-import config from '@/config/config.json';
+import config from "@/config/config.json";
+import { fetch, fetchJSON, handleFetchError } from "@/lib/fetch";
 
 const fetchWithZod = createZodFetcher(fetchJSON);
 
@@ -43,7 +43,7 @@ export const getWeather = async (city: string) => {
 export const getQuote = async () => {
 	const data = await fetchWithZod(
 		z.object({ author: z.string(), content: z.string() }),
-		'https://api.quotable.io/random',
+		"https://api.quotable.io/random",
 	);
 	return {
 		quote: `"${data.content}" _ ${data.author}`,

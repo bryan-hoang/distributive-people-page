@@ -2,12 +2,12 @@
  * @type {import('eslint').Linter.Config}
  */
 const config = {
-	extends: ['next/core-web-vitals'],
+	extends: ["next/core-web-vitals"],
 	// Include config dot files by default.
-	ignorePatterns: ['!.*'],
+	ignorePatterns: ["!.*"],
 	rules: {
-		'sort-imports': [
-			'error',
+		"sort-imports": [
+			"error",
 			{
 				allowSeparatedGroups: true,
 			},

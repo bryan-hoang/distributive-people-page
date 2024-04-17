@@ -1,2 +1,2 @@
-export * from './components/InputField';
-export * from './components/Ps1';
+export * from "./components/InputField";
+export * from "./components/Ps1";

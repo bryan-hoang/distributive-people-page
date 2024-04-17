@@ -1,2 +1,2 @@
-export * from './hooks/useHistory';
-export * from './components/History';
+export * from "./hooks/useHistory";
+export * from "./components/History";

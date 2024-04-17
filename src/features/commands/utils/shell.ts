@@ -1,6 +1,6 @@
-import { Dispatch, SetStateAction } from 'react';
+import type { Dispatch, SetStateAction } from "react";
 
-import * as bin from './bin';
+import * as bin from "./bin";
 
 export const shell = async (
 	command: string,
@@ -8,13 +8,13 @@ export const shell = async (
 	clearHistory: () => void,
 	setCommand: Dispatch<SetStateAction<string>>,
 ) => {
-	const args = command.split(' ');
+	const args = command.split(" ");
 	args[0] = (args[0] as string).toLowerCase();
 
-	if (args[0] === 'clear') {
+	if (args[0] === "clear") {
 		clearHistory();
-	} else if (command === '') {
-		setHistory('');
+	} else if (command === "") {
+		setHistory("");
 	} else if (Object.keys(bin).indexOf(args[0]) === -1) {
 		setHistory(
 			`shell: command not found: ${args[0]}. Try 'help' to get started.`,
@@ -25,5 +25,5 @@ export const shell = async (
 		setHistory(output);
 	}
 
-	setCommand('');
+	setCommand("");
 };

@@ -1,10 +1,10 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useState } from "react";
 
-import { History } from '../types';
+import type { History } from "../types";
 
 export const useHistory = (defaultValue: Array<History>) => {
 	const [history, setHistory] = useState<Array<History>>(defaultValue);
-	const [command, setCommand] = useState<string>('');
+	const [command, setCommand] = useState<string>("");
 	const [lastCommandIndex, setLastCommandIndex] = useState<number>(0);
 
 	const setHistoryCallback = useCallback(

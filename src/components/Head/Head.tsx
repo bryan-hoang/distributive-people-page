@@ -1,6 +1,6 @@
-import NextHead from 'next/head';
+import NextHead from "next/head";
 
-import nextConfig from '@/../next.config';
+import nextConfig from "@/../next.config";
 
 export function Head() {
 	return (

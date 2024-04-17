@@ -33,7 +33,7 @@ export async function fetch(
 				...initOptions,
 				body: JSON.stringify(initOptions.body),
 				headers: {
-					'Content-Type': 'application/json',
+					"Content-Type": "application/json",
 					...initOptions.headers,
 				},
 			};
@@ -42,7 +42,7 @@ export async function fetch(
 
 	const response = await window.fetch(input, initOptions);
 	if (!response.ok) {
-		throw new ResponseError('Bad response', response);
+		throw new ResponseError("Bad response", response);
 	}
 
 	return response;
@@ -68,8 +68,8 @@ export function handleFetchError(error: unknown) {
 		switch (error.response.status) {
 			default:
 				// Show
-				throw new Error('Unhandled fetch response', { cause: error });
+				throw new Error("Unhandled fetch response", { cause: error });
 		}
 	}
-	throw new Error('Unknown fetch error', { cause: error });
+	throw new Error("Unknown fetch error", { cause: error });
 }

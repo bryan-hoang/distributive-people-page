@@ -2,17 +2,17 @@
  * @type {import('lint-staged').Config}
  */
 const config = {
-	'*': (_files) => {
-		return 'pnpm run format --write';
+	"*": (_files) => {
+		return "pnpm run format --apply";
 	},
-	'*.{ts,tsx,js,mjs,cjs}': (_files) => {
-		return 'pnpm run lint:scripts --fix';
+	"*.{ts,tsx,js,mjs,cjs}": (_files) => {
+		return "pnpm run lint:scripts --apply";
 	},
-	'*.{ts,tsx}': (_files) => {
-		return 'pnpm run typecheck';
+	"*.{ts,tsx}": (_files) => {
+		return "pnpm run typecheck";
 	},
-	'*.css': (_files) => {
-		return 'pnpm run lint:styles --fix';
+	"*.css": (_files) => {
+		return "pnpm run lint:styles --fix";
 	},
 };
 

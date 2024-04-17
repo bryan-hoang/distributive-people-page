@@ -5,7 +5,7 @@ import {
 	getQuote,
 	getReadme,
 	getWeather,
-} from '@/features/commands';
+} from "@/features/commands";
 
 export const projects = async (_args: string[]): Promise<string> => {
 	const projects = await getProjects();
@@ -14,7 +14,7 @@ export const projects = async (_args: string[]): Promise<string> => {
 			(repo) =>
 				`${repo.name} - <a class="text-light-blue dark:text-dark-blue underline" href="${repo.html_url}" target="_blank">${repo.html_url}</a>`,
 		)
-		.join('\n');
+		.join("\n");
 };
 
 export const quote = async (_args: string[]): Promise<string> => {
@@ -29,9 +29,9 @@ export const readme = async (_args: string[]): Promise<string> => {
 };
 
 export const weather = async (args: string[]): Promise<string> => {
-	const city = args.join('+');
+	const city = args.join("+");
 	if (!city) {
-		return 'Usage: weather [city]. Example: weather casablanca';
+		return "Usage: weather [city]. Example: weather casablanca";
 	}
 	const weather = await getWeather(city);
 	return weather;

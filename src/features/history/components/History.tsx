@@ -1,5 +1,5 @@
-import { History as HistoryInterface } from '../types';
-import { Ps1 } from '@/features/cli';
+import { Ps1 } from "@/features/cli";
+import type { History as HistoryInterface } from "../types";
 
 type HistoryProps = {
 	history: HistoryInterface[];
@@ -18,7 +18,7 @@ export function History({ history }: HistoryProps): JSX.Element {
 					</div>
 					<p
 						className="whitespace-pre-wrap mb-2"
-						style={{ lineHeight: 'normal' }}
+						style={{ lineHeight: "normal" }}
 						dangerouslySetInnerHTML={{ __html: entry.output }}
 					/>
 				</div>
