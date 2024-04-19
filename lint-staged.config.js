@@ -3,7 +3,7 @@
  */
 const config = {
 	"*": (_files) => {
-		return "pnpm run format --apply";
+		return "pnpm run format --write";
 	},
 	"*.{ts,tsx,js,mjs,cjs}": (_files) => {
 		return "pnpm run lint:scripts --apply";
