@@ -1,3 +1,4 @@
+import { useIsFirstRender } from "@uidotdev/usehooks";
 import Head from "next/head";
 import { useEffect, useRef } from "react";
 
@@ -14,6 +15,7 @@ type IndexPageProps = {
 
 function IndexPage({ inputRef }: IndexPageProps): JSX.Element {
 	const containerRef = useRef<HTMLDivElement>(null);
+	const isFirstRender = useIsFirstRender();
 	const {
 		history,
 		command,
@@ -24,23 +26,16 @@ function IndexPage({ inputRef }: IndexPageProps): JSX.Element {
 		setLastCommandIndex,
 	} = useHistory([]);
 
-	useEffect(() => {
+	if (isFirstRender) {
 		setHistory(banner());
-
-		return () => {
-			clearHistory();
-		};
-
-		// Only run once on mount.
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}
 
 	useEffect(() => {
 		if (inputRef.current) {
 			inputRef.current.scrollIntoView();
 			inputRef.current.focus({ preventScroll: true });
 		}
-	}, [history, inputRef]);
+	}, [inputRef]);
 
 	return (
 		<>

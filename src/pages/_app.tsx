@@ -25,6 +25,7 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
 			<main
 				className={`text-light-foreground dark:text-dark-foreground min-w-max text-xs md:min-w-full md:text-base ${hackFont.variable} font-mono`}
 				onClick={onClickAnywhere}
+				onKeyDown={onClickAnywhere}
 			>
 				<div className="bg-light-background dark:bg-dark-background w-full h-full p-2">
 					<Component {...pageProps} inputRef={inputRef} />
