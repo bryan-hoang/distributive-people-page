@@ -4,40 +4,28 @@
 
 My [&#34;Meet the Team&#34; page at Distributive](https://people.distributive.network/bryanhoang).
 
-## Table of Contents
-
-<!--toc:start-->
-
-- [Table of Contents](#table-of-contents)
-- [Install](#install)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Maintainers](#maintainers)
-- [Credits](#credits)
-- [Contributing](#contributing)
-- [License](#license)
-
-<!--toc:end-->
-
 ## Install
 
 Build-with:
 
 - [React](https://github.com/facebook/react#readme)
 - [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 To set up the dev environment, you need the following tools:
 
 - [Node.js](https://github.com/nodejs/node#download) LTS
 - [`pnpm`](https://github.com/pnpm/pnpm#readme) v8
-- [`rtx`](https://github.com/jdxcode/rtx#quickstart) (Optional)
+- [`mise`](https://github.com/jdxcode/rtx#quickstart) (Optional)
   - To manage tool versions (for example, `node`, `python`, `ruby`).
 - [Corepack](https://nodejs.org/docs/latest/api/corepack.html) (Optional)
   - To manage package manager versions (for example, `npm`, `yarn`, `pnpm`).
 
-To install the project after cloning it, run the following:
+To install the project:
 
 ```console
+git clone https://github.com/bryan-hoang/distributive-people-page.git
+corepack enable
 pnpm install
 ```
 
