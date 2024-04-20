@@ -11,16 +11,14 @@ dotenv.config({
 });
 
 const EnvSchema = object({
-	BASE_PATH: string(),
+	NEXT_PUBLIC_BASE_PATH: string(),
 });
-
-debug(`BASE_PATH: ${process.env.BASE_PATH}`);
 
 let basePath = "";
 const result = safeParse(EnvSchema, process.env);
 
 if (result.success) {
-	basePath += result.output.BASE_PATH;
+	basePath += result.output.NEXT_PUBLIC_BASE_PATH;
 } else {
 	throw new TypeError("BASH_PATH environment variable is not set");
 }

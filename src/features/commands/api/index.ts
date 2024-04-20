@@ -1,36 +1,36 @@
-import { z } from "zod";
-import { createZodFetcher } from "zod-fetch";
+import { ofetch } from "ofetch";
 
 import config from "@/config/config.json";
-import { fetch, fetchJSON, handleFetchError } from "@/lib/fetch";
-
-const fetchWithZod = createZodFetcher(fetchJSON);
+import { handleFetchError } from "@/lib/fetch";
+import { url, array, object, parse, string } from "valibot";
 
 export const getProjects = async () => {
-	const response = await fetchWithZod(
-		z.array(
-			z.object({
-				name: z.string(),
-				html_url: z.string(),
-			}),
-		),
+	const response = await ofetch(
 		`https://api.github.com/users/${config.social.github}/repos`,
 	);
 
-	return response;
+	const projects = parse(
+		array(
+			object({
+				name: string(),
+				html_url: string([url()]),
+			}),
+		),
+		response,
+	);
+
+	return projects;
 };
 
 export const getReadme = async () => {
-	const response = await fetch(config.readmeUrl);
-	const data = await response.text();
-	return data;
+	const response = await ofetch(config.readmeUrl);
+	return response;
 };
 
 export const getWeather = async (city: string) => {
 	try {
-		const response = await fetch(`https://wttr.in/${city}?ATm`);
-		const data = await response.text();
-		return data;
+		const response = await ofetch(`https://wttr.in/${city}?ATm`);
+		return response;
 	} catch (error) {
 		handleFetchError(error);
 
@@ -41,9 +41,13 @@ export const getWeather = async (city: string) => {
 };
 
 export const getQuote = async () => {
-	const data = await fetchWithZod(
-		z.object({ author: z.string(), content: z.string() }),
-		"https://api.quotable.io/random",
+	const response = await ofetch("https://api.quotable.io/random");
+	const data = parse(
+		object({
+			author: string(),
+			content: string(),
+		}),
+		response,
 	);
 	return {
 		quote: `"${data.content}" _ ${data.author}`,

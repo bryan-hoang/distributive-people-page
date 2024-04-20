@@ -1,6 +1,6 @@
 import NextHead from "next/head";
 
-import nextConfig from "@/../next.config";
+import { BASE_PATH } from "@/config";
 
 export function Head() {
 	return (
@@ -11,7 +11,7 @@ export function Head() {
 				key="viewport"
 				maximum-scale="1"
 			/>
-			<link rel="icon" href={`${nextConfig.basePath}/favicon.ico`} />
+			<link rel="icon" href={`${BASE_PATH}/favicon.svg`} />
 		</NextHead>
 	);
 }

@@ -1,7 +1,10 @@
 import { Interweave } from "interweave";
+import { polyfill } from "interweave-ssr";
 
 import { Ps1 } from "@/features/cli";
 import type { History as HistoryInterface } from "../types";
+
+polyfill();
 
 type HistoryProps = {
 	history: HistoryInterface[];
