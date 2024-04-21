@@ -10,6 +10,8 @@ dotenv.config({
 	override: true,
 });
 
+debug(`BASE_PATH: ${process.env.NEXT_PUBLIC_BASE_PATH}`);
+
 const EnvSchema = object({
 	NEXT_PUBLIC_BASE_PATH: string(),
 });
