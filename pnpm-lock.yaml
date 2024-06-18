@@ -39,8 +39,8 @@ importers:
         specifier: ^5.1.0
         version: 5.2.1(react@18.3.1)
       valibot:
-        specifier: 0.32.0
-        version: 0.32.0
+        specifier: 0.33.1
+        version: 0.33.1
     devDependencies:
       '@biomejs/biome':
         specifier: 1.8.1
@@ -1323,8 +1323,8 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  valibot@0.32.0:
-    resolution: {integrity: sha512-FXBnJl4bNOmeg7lQv+jfvo/wADsRBN8e9C3r+O77Re3dEnDma8opp7p4hcIbF7XJJ30h/5SVohdjer17/sHOsQ==}
+  valibot@0.33.1:
+    resolution: {integrity: sha512-rmAlZGIcuvTir4HGFxBKn4vH003w+wr9qUiScMAG46np7TAedj7foYAR7Im4v9W/gW0CyW2Qmaygrmhd96yreQ==}
 
   which@1.3.1:
     resolution: {integrity: sha512-HxJdYWq1MTIQbJ3nw0cqssHoTNU267KlrDuGZ1WYlxDStUtKUhOaJmh112/TZmHxxUfuJqPXSOm7tDyas0OSIQ==}
@@ -2502,7 +2502,7 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  valibot@0.32.0: {}
+  valibot@0.33.1: {}
 
   which@1.3.1:
     dependencies:
