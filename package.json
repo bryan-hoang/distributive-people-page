@@ -43,5 +43,5 @@
 		"taze": "0.16.6",
 		"typescript": "^5.4.5"
 	},
-	"packageManager": "pnpm@9.7.1"
+	"packageManager": "pnpm@9.8.0"
 }
