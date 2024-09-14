@@ -88,8 +88,8 @@ importers:
         specifier: ^3.4.3
         version: 3.4.11
       taze:
-        specifier: 0.16.8
-        version: 0.16.8
+        specifier: 0.16.9
+        version: 0.16.9
       typescript:
         specifier: ^5.4.5
         version: 5.6.2
@@ -1426,8 +1426,8 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  taze@0.16.8:
-    resolution: {integrity: sha512-vrkKrpVxkLrvSJ5Hc0FNheaJGoxv+uxzMWbGJCpucUpN5CnUlfvdL+mK98LGVqQZSjaPcAbkSQ/08N520ddLaQ==}
+  taze@0.16.9:
+    resolution: {integrity: sha512-5dROtuXIaP3HOHy7f2jTvnfHbHO8ubCoqfv1At3UOo7QB63y8oLNwpuj7w/4IdVY+lkzQSDV6f5L5Bhl3kq9QQ==}
     hasBin: true
 
   thenify-all@1.6.0:
@@ -2736,7 +2736,7 @@ snapshots:
     transitivePeerDependencies:
       - ts-node
 
-  taze@0.16.8:
+  taze@0.16.9:
     dependencies:
       '@antfu/ni': 0.23.0
       js-yaml: 4.1.0
