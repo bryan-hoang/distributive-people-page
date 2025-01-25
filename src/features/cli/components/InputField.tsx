@@ -1,6 +1,7 @@
 import type {
 	ChangeEvent,
 	Dispatch,
+	JSX,
 	KeyboardEvent,
 	MutableRefObject,
 	RefObject,
@@ -13,7 +14,7 @@ import { Ps1 } from "./Ps1";
 
 type InputFieldProps = {
 	inputRef: MutableRefObject<HTMLInputElement>;
-	containerRef: RefObject<HTMLDivElement>;
+	containerRef: RefObject<HTMLDivElement | null>;
 	command: string;
 	setCommand: Dispatch<SetStateAction<string>>;
 	lastCommandIndex: number;
@@ -106,7 +107,7 @@ export function InputField({
 
 	return (
 		<div className="flex flex-row space-x-2">
-			<label htmlFor="prompt" className="flex-shrink">
+			<label htmlFor="prompt" className="shrink">
 				<Ps1 />
 			</label>
 
@@ -114,7 +115,7 @@ export function InputField({
 				ref={inputRef}
 				id="prompt"
 				type="text"
-				className={`bg-light-background dark:bg-dark-background focus:outline-none flex-grow ${
+				className={`bg-light-background dark:bg-dark-background focus:outline-hidden grow ${
 					commandExists(command) || command === ""
 						? "text-dark-green"
 						: "text-dark-red"

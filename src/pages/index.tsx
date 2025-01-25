@@ -1,6 +1,6 @@
 import { useIsFirstRender } from "@uidotdev/usehooks";
 import Head from "next/head";
-import { useEffect, useRef } from "react";
+import { type JSX, useEffect, useRef } from "react";
 
 import { InputField } from "@/features/cli";
 import { banner } from "@/features/commands";
@@ -43,7 +43,7 @@ function IndexPage({ inputRef }: IndexPageProps): JSX.Element {
 				<title>{config.title}</title>
 			</Head>
 
-			<div className="p-8 overflow-hidden h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
+			<div className="p-8 overflow-hidden h-full border-2 rounded-sm border-light-yellow dark:border-dark-yellow">
 				<div ref={containerRef} className="overflow-y-auto h-full">
 					<History history={history} />
 

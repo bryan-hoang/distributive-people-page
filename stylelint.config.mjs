@@ -13,9 +13,10 @@ const config = {
 		"at-rule-no-unknown": [
 			true,
 			{
-				ignoreAtRules: /tailwind/,
+				ignoreAtRules: /config/,
 			},
 		],
+		"import-notation": "string",
 	},
 };
 

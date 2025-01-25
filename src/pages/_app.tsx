@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import localFont from "next/font/local";
-import { useRef } from "react";
+import { type JSX, useRef } from "react";
 
 import { Head } from "@/components/Head";
 

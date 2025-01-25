@@ -2,22 +2,21 @@ import { ofetch } from "ofetch";
 
 import config from "@/config/config.json";
 import { handleFetchError } from "@/lib/fetch";
-import { url, array, object, parse, string } from "valibot";
+import * as v from "valibot";
 
 export const getProjects = async () => {
 	const response = await ofetch(
 		`https://api.github.com/users/${config.social.github}/repos`,
 	);
 
-	const projects = parse(
-		array(
-			object({
-				name: string(),
-				html_url: string([url()]),
-			}),
-		),
-		response,
+	const ProjectSchema = v.array(
+		v.object({
+			name: v.string(),
+			html_url: v.pipe(v.string(), v.url()),
+		}),
 	);
+
+	const projects = v.parse(ProjectSchema, response);
 
 	return projects;
 };
@@ -42,13 +41,11 @@ export const getWeather = async (city: string) => {
 
 export const getQuote = async () => {
 	const response = await ofetch("https://api.quotable.io/random");
-	const data = parse(
-		object({
-			author: string(),
-			content: string(),
-		}),
-		response,
-	);
+	const QuoteSchema = v.object({
+		author: v.string(),
+		content: v.string(),
+	});
+	const data = v.parse(QuoteSchema, response);
 	return {
 		quote: `"${data.content}" _ ${data.author}`,
 	};
