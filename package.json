@@ -35,7 +35,7 @@
 		"@types/react-dom": "19.0.3",
 		"dotenv": "16.4.7",
 		"husky": "^9.1.7",
-		"lint-staged": "15.4.2",
+		"lint-staged": "15.4.3",
 		"postcss": "^8.5.1",
 		"stylelint": "16.14.0",
 		"stylelint-config-standard": "37.0.0",
