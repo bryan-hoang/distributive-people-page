@@ -18,8 +18,8 @@ importers:
         specifier: 4.4.0
         version: 4.4.0
       interweave:
-        specifier: 13.1.0
-        version: 13.1.0(react@19.0.0)
+        specifier: 13.1.1
+        version: 13.1.1(react@19.0.0)
       interweave-ssr:
         specifier: 2.0.0
         version: 2.0.0
@@ -1114,10 +1114,10 @@ packages:
     resolution: {integrity: sha512-vxWOJzQsm4neGGOksKEOovOP3d6elGJ3bKnssreDIWK+luveNUvV69enU28UtX5KFx8ft1wXDa2Dk/G87DEf+A==}
     engines: {node: '>=12.17.0', npm: '>=6.13.0'}
 
-  interweave@13.1.0:
-    resolution: {integrity: sha512-JIDq0+2NYg0cgL7AB26fBcV0yZdiJvPDBp+aF6k8gq6Cr1kH5Gd2/Xqn7j8z+TGb8jCWZn739jzalCz+nPYwcA==}
+  interweave@13.1.1:
+    resolution: {integrity: sha512-5GdAavzK1i2BeeLTPzj0o6/zJMfLqQZq/2Q4c3ALT8ByEWf1syzl2MlQMTUoWzETy1x1/cAkZjiqOlulaoDRxw==}
     peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   is-arrayish@0.2.1:
     resolution: {integrity: sha512-zz06S8t0ozoDXMG+ube26zeCTNXcKIPJZJi8hBrF4idCLms4CG9QtK7qBl1boi5ODzFpjswb5JPmHCbMpjaYzg==}
@@ -2473,7 +2473,7 @@ snapshots:
       parse5: 6.0.1
       style-parser: 1.1.1
 
-  interweave@13.1.0(react@19.0.0):
+  interweave@13.1.1(react@19.0.0):
     dependencies:
       escape-html: 1.0.3
       react: 19.0.0
