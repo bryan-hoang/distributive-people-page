@@ -88,8 +88,8 @@ importers:
         specifier: ^4.0.3
         version: 4.0.3
       taze:
-        specifier: 18.4.0
-        version: 18.4.0
+        specifier: 18.5.0
+        version: 18.5.0
       typescript:
         specifier: ^5.7.3
         version: 5.7.3
@@ -1606,8 +1606,8 @@ packages:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
     engines: {node: '>=6'}
 
-  taze@18.4.0:
-    resolution: {integrity: sha512-FHwVku4taloXQVTUYkef4lfaDRCz/Q+pls+4Kqvtk83LcKuEwzTSvMuUfBSDRGQBCLhLoLvcDHngmdoZkRNv7w==}
+  taze@18.5.0:
+    resolution: {integrity: sha512-Bo9WHkvpwyfVS+ZOM7ZuNYFBuhZP6qBSb9FaQYNxxMK+y6iXDodwJ0g4LcVyAtAjcGS2l4ChyNsFbsQn4BbXcA==}
     hasBin: true
 
   tinyexec@0.3.2:
@@ -2948,7 +2948,7 @@ snapshots:
 
   tapable@2.2.1: {}
 
-  taze@18.4.0:
+  taze@18.5.0:
     dependencies:
       '@antfu/ni': 23.3.1
       ofetch: 1.4.1
