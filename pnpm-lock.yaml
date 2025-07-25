@@ -67,8 +67,8 @@ importers:
         specifier: 19.1.6
         version: 19.1.6(@types/react@19.1.8)
       dotenv:
-        specifier: 17.2.0
-        version: 17.2.0
+        specifier: 17.2.1
+        version: 17.2.1
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -696,8 +696,8 @@ packages:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
     engines: {node: '>=8'}
 
-  dotenv@17.2.0:
-    resolution: {integrity: sha512-Q4sgBT60gzd0BB0lSyYD3xM4YxrXA9y4uBDof1JNYGzOXrQdQ6yX+7XIAqoFOGQFOTK1D3Hts5OllpxMDZFONQ==}
+  dotenv@17.2.1:
+    resolution: {integrity: sha512-kQhDYKZecqnM0fCnzI5eIv5L4cAe/iRI+HqMbO/hbRdTAeXDG+M9FjipUxNfbARuEg4iHIbhnhs78BCHNbSxEQ==}
     engines: {node: '>=12'}
 
   emoji-regex@10.4.0:
@@ -1848,7 +1848,7 @@ snapshots:
     dependencies:
       path-type: 4.0.0
 
-  dotenv@17.2.0: {}
+  dotenv@17.2.1: {}
 
   emoji-regex@10.4.0: {}
 
