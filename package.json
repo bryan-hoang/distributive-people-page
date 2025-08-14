@@ -26,7 +26,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.2.0",
-		"@tailwindcss/postcss": "4.1.11",
+		"@tailwindcss/postcss": "4.1.12",
 		"@total-typescript/ts-reset": "0.6.1",
 		"@tsconfig/next": "2.0.3",
 		"@tsconfig/strictest": "2.0.5",
