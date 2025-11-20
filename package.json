@@ -6,7 +6,7 @@
 		"dev": "next dev",
 		"format": "biome format .",
 		"lint:scripts": "biome lint .",
-		"lint:styles": "stylelint --cache --cache-location=.cache/stylelint/ --cache-strategy=content --ignore-path=.gitignore '**/*.css'",
+		"lint:styles": "stylelint --cache --cache-location=.cache/stylelint/ --cache-strategy=content --ignore-path=.gitignore **/*.css",
 		"prepare": "husky",
 		"start": "next start",
 		"typecheck": "tsc"
