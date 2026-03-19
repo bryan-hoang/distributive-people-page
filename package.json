@@ -12,7 +12,7 @@
 		"typecheck": "tsc"
 	},
 	"dependencies": {
-		"@types/debug": "4.1.12",
+		"@types/debug": "4.1.13",
 		"@uidotdev/usehooks": "2.4.1",
 		"debug": "4.4.3",
 		"interweave": "13.1.1",
